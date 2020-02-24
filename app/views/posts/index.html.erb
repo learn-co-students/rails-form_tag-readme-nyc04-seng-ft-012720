@@ -1,6 +1,10 @@
 <h1>Posts</h1>
 <ul>
   <% @posts.each do |p| %>
-    <li><%= p.title %> - <%= p.description %></li>
+    <li><%= link_to p.title, post_path(p.id) %></li>
+    <li><%= p.description %></li>
   <% end %>
 </ul>
+
+<!-- <h4><%= link_to "Create A New Post", new_post_path %></h4>
+-->
